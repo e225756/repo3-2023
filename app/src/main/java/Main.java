@@ -6,7 +6,6 @@ public class Main {
         Enemy enemy = new Enemy("スライム", 6, 3);
 
         System.out.printf("%s vs. %s\n", hero.name, enemy.name);
-
         int turn = 0;
         while( hero.dead == false && enemy.dead == false ){
             turn++;
