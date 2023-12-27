@@ -11,18 +11,18 @@ public class LivingThing {
         hitPoint = maximumHP;
         this.attack = attack;
         dead = false;
-        System.out.printf("%sのHPは%d。攻撃力は%dです。\\n",name, maximumHP, attack);
+        System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
     }
 
     public boolean isDead(){
         return dead = true;
-
+    
     }
 
     public int getHitPoint(){
         return hitPoint;
     }
-
+    
     public String getName(){
         return name;
     }
@@ -30,7 +30,7 @@ public class LivingThing {
     public void attack(LivingThing opponent){
         if (this.dead == false){
             int damage = (int)(Math.random() * attack);
-            System.out.printf("%sの攻撃%sに%dのダメージを与えた\n", name, opponent.getName(), damage);
+            System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, opponent.getName(), damage);
             opponent.wounded(damage);
         }
     }

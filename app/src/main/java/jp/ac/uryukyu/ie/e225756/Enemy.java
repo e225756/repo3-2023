@@ -9,40 +9,12 @@ package jp.ac.uryukyu.ie.e225756;
  * Created by tnal on 2016/11/13.
  */
 public class Enemy extends LivingThing{
-    private String name;
-     private int hitPoint;
-     private int attack;
-     private boolean dead;
 
-     public String getName(){
-         return this.name;
-     }
-
-     public int getHitPoint(){
-         return this.hitPoint;
-     }
-
-      public int getAttack(){
-         return this.attack;
-     }
-
-     public boolean getDead(){
-         return this.dead;
-     }
-
-
-    /**
-     * コンストラクタ。名前、最大HP、攻撃力を指定する。
-     * @param name モンスター名
-     * @param maximumHP モンスターのHP
-     * @param attack モンスターの攻撃力
-     */
     public Enemy (String name, int maximumHP, int attack) {
         super(name, maximumHP, attack);
     }
-
-    @Override
     
+    @Override
     public void wounded(int damage){
         hitPoint -= damage;
         if( hitPoint < 0 ) {
@@ -50,5 +22,4 @@ public class Enemy extends LivingThing{
             System.out.printf("モンスター%sは倒れた。\n", name);
         }
     }
-
 }
